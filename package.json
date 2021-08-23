@@ -1,6 +1,6 @@
 {
   "name": "@dhmk/cell-react",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "React integration for @dhmk/cell",
   "keywords": [
     "observable",
