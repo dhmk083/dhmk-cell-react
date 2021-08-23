@@ -1,0 +1,52 @@
+{
+  "name": "@dhmk/cell-react",
+  "version": "0.0.0",
+  "description": "React integration for @dhmk/cell",
+  "keywords": [
+    "observable",
+    "reactive",
+    "dependency",
+    "state",
+    "cell",
+    "atom",
+    "react"
+  ],
+  "license": "MIT",
+  "repository": "github:dhmk083/dhmk-cell-react",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "files": [
+    "lib",
+    "esm"
+  ],
+  "scripts": {
+    "preversion": "yarn test && yarn build",
+    "version": "git add -A",
+    "postversion": "git push && git push --tags",
+    "clean": "rm -rf lib esm",
+    "build": "yarn clean && tsc && tsc -m esnext --outDir esm",
+    "test": "yarn clean && jest"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^11.2.2",
+    "@types/jest": "^26.0.19",
+    "@types/react": "^17.0.0",
+    "jest": "^26.6.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "@dhmk/cell": "^0.0.2",
+    "@dhmk/hooks": "^1.0.0"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  }
+}
